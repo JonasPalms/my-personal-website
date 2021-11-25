@@ -1,6 +1,8 @@
 
 const navToggle = document.querySelector('.nav-toggle');
 
+console.log(typeof navToggle);
+
 // finder alle navlinks //
 const navLinks = document.querySelectorAll(".nav__link")
 
