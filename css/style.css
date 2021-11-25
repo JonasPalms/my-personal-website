@@ -417,15 +417,18 @@ so from about 600-800 px */
 /* Man kan ikke se farven normalt da billedet dækker men ses ved transition*/
 .portfolio__item {
     background-color: var(--clr-accent);
-    overflow: hidden;
+    overflow: hidden;   
     
 }
 
 .portfolio__img {
     transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1),
     opacity 250ms linear;
-    
+    object-fit: fill;  
+   
 }
+
+
 
 /* Laver en cool lille effekt når man hover/focus på cellen */
 .portfolio__img:hover,

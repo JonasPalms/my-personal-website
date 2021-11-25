@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jonas Portfolio website</title>
+    <link rel="icon" type="image/svg+xml" href="img/fav-icon.svg">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -17,7 +18,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;900&family=Source+Sans+Pro:wght@300;900&display=swap"
         rel="stylesheet">
-    <script src="js/index.js"></script>
+    <script src="js/index.js" defer></script>
 </head>
 
 <body>
@@ -64,7 +65,7 @@
                 </svg>
 
 
-            </div> <!-- / service -->
+            </div> <!-- / skill -->
 
             <div class="service">
                 <h3>CSS</h3>
@@ -77,7 +78,7 @@
                     <path fill='RGB(255,255,255)'
                         d='M 226,265 L 295,265 288,338 226,355 226,414 341,382 367,94 226,94 226,150 306,150 300,208 226,208 z' />
                 </svg>
-            </div> <!-- / service -->
+            </div> <!-- / skill -->
 
             <div class="service">
                 <h3>Javascript</h3>
@@ -90,7 +91,7 @@
                     <path fill='RGB(255,255,255)'
                         d='M 226,265 L 295,265 288,338 226,355 226,414 341,382 357,208 226,208 z M 226,94 L 339,94 357,180 301,180 293,150 226,150 z' />
                 </svg>
-            </div> <!-- / service -->
+            </div> <!-- / skill -->
         </div>
         <a href="#work" class="btn">My work</a>
     </section>
@@ -99,16 +100,17 @@
 
     <section class="about-me" id="about">
         <h2 class="section__title section__title--about">Who i am</h2>
-        <p class="section__subtitle section__subtitle--about"> Uddannet designingeniør og selvlært front-end udvikler
+        <p class="section__subtitle section__subtitle--about"> Engineer and self-taught developer
         </p>
 
         <div class="about-me__body">
-            <p>I'm Jonas, an aspiring software developer with a love for building interactive </p>
+            <p>I'm Jonas, an aspiring software developer with a newly found love for building interactive websites and
+                applications.</p>
             <p>I am constantly learning new tools and techniques and my portfolio will be updated frequently with more
-                advanced projects.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel dolorem magnam itaque consequuntur
-                repellendus id, temporibus ut laboriosam excepturi, enim officiis qui, distinctio delectus! Explicabo
-                maiores consequatur ipsam deserunt rem.</p>
+                advanced projects. In the coming months I will be sharpening my native Javascript skills while picking
+                up on CSS
+                pre-processors.</p>
+            <p>Stay tuned!</p>
         </div>
 
         <img src="img/boat-picture.jpg" alt="jonas on a boat" class="about-me__img">
@@ -118,16 +120,16 @@
 
     <section class="my-work" id="work">
         <h2 class="section__title section__title--my-work">My work</h2>
-        <p class="section__subtitle section__subtitle--my-work">A selection of my range of work</p>
+        <p class="section__subtitle section__subtitle--my-work">Some of my learning projects</p>
 
         <div class="portfolio">
             <!-- portfolio item 1 -->
-            <a href="analog-clock.html" class="portfolio__item">
-                <img src="img/clock_picture.png" alt="survey project" class="portfolio__img">
+            <a href="portfolio-item-analog-clock.html" class="portfolio__item">
+                <img src="img/clock_picture.png" alt="analog clock project" class="portfolio__img">
             </a>
             <!-- portfolio item 2 -->
-            <a href="portfolio-item2.html" class="portfolio__item">
-                <img src="https://www.fillmurray.com/640/360" alt="survey project" class="portfolio__img">
+            <a href="portfolio-item-timer.html" class="portfolio__item">
+                <img src="img/timer_picture.png" alt="timer project" class="portfolio__img">
             </a>
             <!-- portfolio item 3 -->
             <a href="portfolio-item3.html" class="portfolio__item">

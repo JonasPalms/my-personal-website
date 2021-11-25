@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonas Portfolio website</title>
+    <link rel="icon" type="image/svg+xml" href="img/fav-icon.svg">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+        href="@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;900&family=Source+Sans+Pro:wght@300;900&display=swap');">
+
+</head>
+
+<body>
+    <header>
+
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="index.html#services" class="nav__link">My services</a></li>
+                <li class="nav__item"><a href="index.html#about" class="nav__link">About me</a></li>
+                <li class="nav__item"><a href="index.html#work" class="nav__link">Work</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- introduction -->
+
+    <section class="intro">
+        <h1 class="section__title section__title--intro">
+            <strong>Analog Clock </strong>
+        </h1>
+        <p class="section__subtitle section__subtitle--intro">front-end dev</p>
+        <img src="img/portfolio-01.png" alt="survey image" class="intro__img">
+    </section>
+
+    <div class="portfolio-item-individual">
+        <p>Small project showcasing the use of the date object in Javascript trough an Analog clock.</p>
+        <p>Here I've used psuedo elements and Javascript DOM manipulation to update the clock in real-time</p>
+        <a href="/portfolio_projects/clock/index.html">
+            <img src="img/clock_picture.png" alt="project descripttion">
+        </a>
+
+
+    </div>
+
+    <footer class="footer">
+        <a href="mailto:jonas.p.sorensen@gmail.com" class="footer-link">jonas.p.sorensen@gmail.com</a>
+        <ul class="social-list">
+            <li class="social-list__item"><a href="https://www.facebook.com/profile.php?id=1449592166"
+                    class="social-list__link"><i class="fab fa-facebook"></i></a></li>
+            <li class="social-list__item"><a href="https://github.com/JonasPalms" class="social-list__link"><i
+                        class="fab fa-github"></i></a>
+            </li>
+            <li class="social-list__item"><a href="https://www.linkedin.com/in/jonaspalmsorensen/"
+                    class="social-list__link"><i class="fab fa-linkedin"></i></a></li>
+            <li class="social-list__item"><a href="tel:60155594" class="social-list__link"><i
+                        class="fas fa-mobile"></i></a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
