@@ -424,7 +424,9 @@ so from about 600-800 px */
 .portfolio__img {
     transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1),
     opacity 250ms linear;
-    object-fit: fill;  
+    object-fit: cover;
+    height: 100%;
+    
    
 }
 
