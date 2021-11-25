@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonas Portfolio website</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;900&family=Source+Sans+Pro:wght@300;900&display=swap"
+        rel="stylesheet">
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <header>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#services" class="nav__link">My services</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
+                <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- introduction -->
+
+    <section class="intro" id="home">
+        <h1 class="section__title section__title--intro">
+            Hi, i am <strong>Jonas Sørensen</strong>
+        </h1>
+        <p class="section__subtitle section__subtitle--intro">front-end dev | engineer</p>
+        <img src="img/profile_picture.jpg" alt="billede af Jonas" class="intro__img">
+    </section>
+
+    <!-- my services -->
+
+    <section class="my-services" id="services">
+        <h2 class="section__title section__title--services">My skills</h2>
+
+        <div class="services">
+            <div class="service">
+                <h3>HTML5</h3>
+                <svg viewBox="0 0 452 520">
+                    <title>HTML5 Logo Badge</title>
+                    <path fill='RGB(227,79,38)' d='M 41,460 L 0,0 451,0 410,460 225,512' />
+                    <path fill='RGB(239,101,42)' d='M 226,472 L 375,431 410,37 226,37' />
+                    <path fill='RGB(236,237,238)'
+                        d='M 226,208 L 151,208 146,150 226,150 226,94 84,94 99,265 226,265 z M 226,355 L162,338 158,293 102,293 109,382 226,414 z' />
+                    <path fill='RGB(255,255,255)'
+                        d='M 226,265 L 295,265 288,338 226,355 226,414 341,382 357,208 226,208 z M 226,94 L226,150 362,150 367,94 z' />
+                </svg>
+
+
+            </div> <!-- / service -->
+
+            <div class="service">
+                <h3>CSS</h3>
+                <svg viewBox="0 0 452 520">
+                    <title>CSS3 Logo Badge</title>
+                    <path fill='RGB(12,115,184)' d='M 41,460 L 0,0 451,0 410,460 225,512' />
+                    <path fill='RGB(48,169,220)' d='M 226,472 L 375,431 410,37 226,37' />
+                    <path fill='RGB(236,237,238)'
+                        d='M 226,208 L 94,208 99,265 226,265 z M 226,94 L 84,94 89,150 226,150 z M 226,355 L 102,322 109,382 226,414 z' />
+                    <path fill='RGB(255,255,255)'
+                        d='M 226,265 L 295,265 288,338 226,355 226,414 341,382 367,94 226,94 226,150 306,150 300,208 226,208 z' />
+                </svg>
+            </div> <!-- / service -->
+
+            <div class="service">
+                <h3>Javascript</h3>
+                <svg viewBox="0 0 452 520">
+                    <title>Javascript Logo Badge</title>
+                    <path fill='RGB(229,162,40)' d='M 0,0 L 451,0 410,460 225,512 41,460' />
+                    <path fill='RGB(241,191,38)' d='M 226,472 L375,431 410,37 226,37' />
+                    <path fill='RGB(236,237,238)'
+                        d='M 226,94 L 113,94 102,265 226,265 226,208 160,208 165,150 226,150 z M 226,355 L 162,338 158,293 102,293 109,382 226,414 z' />
+                    <path fill='RGB(255,255,255)'
+                        d='M 226,265 L 295,265 288,338 226,355 226,414 341,382 357,208 226,208 z M 226,94 L 339,94 357,180 301,180 293,150 226,150 z' />
+                </svg>
+            </div> <!-- / service -->
+        </div>
+        <a href="#work" class="btn">My work</a>
+    </section>
+
+    <!-- about me -->
+
+    <section class="about-me" id="about">
+        <h2 class="section__title section__title--about">Who i am</h2>
+        <p class="section__subtitle section__subtitle--about"> Uddannet designingeniør og selvlært front-end udvikler
+        </p>
+
+        <div class="about-me__body">
+            <p>I'm Jonas, an aspiring software developer with a love for building interactive </p>
+            <p>I am constantly learning new tools and techniques and my portfolio will be updated frequently with more
+                advanced projects.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel dolorem magnam itaque consequuntur
+                repellendus id, temporibus ut laboriosam excepturi, enim officiis qui, distinctio delectus! Explicabo
+                maiores consequatur ipsam deserunt rem.</p>
+        </div>
+
+        <img src="img/boat-picture.jpg" alt="jonas on a boat" class="about-me__img">
+    </section>
+
+    <!-- my work -->
+
+    <section class="my-work" id="work">
+        <h2 class="section__title section__title--my-work">My work</h2>
+        <p class="section__subtitle section__subtitle--my-work">A selection of my range of work</p>
+
+        <div class="portfolio">
+            <!-- portfolio item 1 -->
+            <a href="analog-clock.html" class="portfolio__item">
+                <img src="img/clock_picture.png" alt="survey project" class="portfolio__img">
+            </a>
+            <!-- portfolio item 2 -->
+            <a href="portfolio-item2.html" class="portfolio__item">
+                <img src="https://www.fillmurray.com/640/360" alt="survey project" class="portfolio__img">
+            </a>
+            <!-- portfolio item 3 -->
+            <a href="portfolio-item3.html" class="portfolio__item">
+                <img src="https://www.fillmurray.com/640/360" alt="survey project" class="portfolio__img">
+            </a>
+            <!-- portfolio item 4 -->
+            <a href="portfolio-item4.html" class="portfolio__item">
+                <img src="https://www.fillmurray.com/640/360" alt="survey project" class="portfolio__img">
+            </a>
+            <!-- portfolio item 5 -->
+            <a href="portfolio-item5.html" class="portfolio__item">
+                <img src="https://www.fillmurray.com/640/360" alt="survey project" class="portfolio__img">
+            </a>
+            <!-- portfolio item 6 -->
+            <a href="portfolio-item6.html" class="portfolio__item">
+                <img src="https://www.fillmurray.com/640/360" alt="survey project" class="portfolio__img">
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <a href="mailto:jonas.p.sorensen@gmail.com" class="footer-link">jonas.p.sorensen@gmail.com</a>
+        <ul class="social-list">
+            <li class="social-list__item"><a href="https://www.facebook.com/profile.php?id=1449592166"
+                    class="social-list__link"><i class="fab fa-facebook"></i></a></li>
+            <li class="social-list__item"><a href="https://github.com/JonasPalms" class="social-list__link"><i
+                        class="fab fa-github"></i></a>
+            </li>
+            <li class="social-list__item"><a href="https://www.linkedin.com/in/jonaspalmsorensen/"
+                    class="social-list__link"><i class="fab fa-linkedin"></i></a></li>
+            <li class="social-list__item"><a href="tel:60155594" class="social-list__link"><i
+                        class="fas fa-mobile"></i></a>
+            </li>
+        </ul>
+    </footer>
+
+
+
+</body>
+
+</html>

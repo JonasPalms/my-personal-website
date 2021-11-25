@@ -1,0 +1,507 @@
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+}
+
+/* Custom properties */
+
+:root {
+    --ff-primary: "Source Sans Pro", sans-serif; 
+    --ff-secondary: "Source Code Pro", monospace;
+    
+    --fw-regular: 300;
+    --fw-bold: 900;
+    
+    --clr-light: #FFF; 
+    --clr-dark: #303030;
+    --clr-accent: #16E0BD;
+    
+    --fs-h1: 3rem;
+    --fs-h2:  2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+    
+    /* 2 skygger gør det lidt mere realistisk skygge*/
+    --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.125); 
+}
+
+/* Cool way of automatically changing font sizes using media query */
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2:  3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }  
+}
+
+/* General styles */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6; 
+}
+
+section {
+    padding: 5em 2em;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+strong {
+    font-weight: var(--fw-bold);
+}
+
+/* Laver en offset outline når man tab'er rundt på links. Ser lidt anderles ud */
+:focus {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 1em 2.5em;
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    border-radius: 5 px;
+    text-transform: uppercase;
+    letter-spacing: 2px; 
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* Typography */
+
+h1, 
+h2, 
+h3 {
+    line-height: 1.1;
+    margin: 0;
+    
+}
+
+h1 {font-size: var(--fs-h1);}
+h2 {font-size: var(--fs-h2);}
+h3 {font-size: var(--fs-h3);}
+
+.section__title {
+    margin-bottom: 0.25em;
+}
+
+.section__title--intro {
+    font-weight: var(--fw-regular);
+}
+
+.section__title--intro > strong {
+    display: block; /* Makes sure the name is display in seperate line */
+}
+.section__subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+    background: var(--clr-accent);
+    padding: 0.25em 1em;
+    font-family: var(--ff-secondary);
+    margin-bottom: 1em;
+}
+
+.section__title--my-work {
+    color: var(--clr-light);
+    margin-top: 1em;
+    
+}
+
+.section__subtitle--my-work {
+    color: var(--clr-accent);
+    font-weight: var(--fw-bold);
+    margin-bottom: 1em;
+}
+
+/* Header */
+
+.logo__img {
+    width: 50px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.nav {
+    position: fixed;
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100; 
+
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+/* Husk display: flex i selve ul listen yes */
+.nav__list {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-direction: column; 
+    justify-content: space-evenly; 
+    align-items: center; 
+    margin: 0; 
+    padding: 0; 
+} 
+.nav__link {
+    color: inherit;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h2);
+    text-decoration: none ;
+}
+
+.nav__link:hover {
+    color: var(--clr-accent);
+}
+
+.nav-toggle {
+    padding: 0.5em; 
+    background: transparent;
+    border: 0; 
+    cursor: pointer;
+    position: absolute; 
+    right: 1em; 
+    top: 1em; 
+    z-index: 1000; 
+}
+
+.nav-open .nav {
+    transform: translateX(0);   
+}
+
+.nav-open .nav-toggle {
+    position: fixed; 
+}
+
+.nav-open .hamburger {
+    transform: rotate(0.625turn); 
+}
+
+.nav-open .hamburger::after {
+    opacity: 0; 
+}
+
+/* Skaber et kryds. flytter stregen 6px pga fordi de er 6px fra hinanden */ 
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px); 
+}
+
+.hamburger {
+    display: block; /* span is inline by default*/
+    position: relative; 
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background: var(--clr-accent);
+    width: 2em; 
+    height: 3px; 
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out; 
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0; 
+}
+
+.hamburger::before {top: 6px;} /* Afstanden mellem de tre streger er 6px */
+.hamburger::after {bottom: 6px;}
+
+/* Intro section */
+
+.intro {
+    position: relative;
+}
+
+.intro__img {
+    box-shadow: var(--bs);
+}
+
+@media (min-width: 600px) {
+    .intro {
+        display: grid;
+        grid-column-gap: 1em; /* Creates spacing between columns */
+        width: min-content;
+        margin: 0 auto;
+        /* Remember that these are "just" template for now. We use them in next assingment*/
+        grid-template-areas: 
+        "img title"       
+        "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+    
+    /* Here we apply the intro__img to the template areas of img above. */
+    .intro__img {
+        grid-area: img;
+        /* This made the img disappear. Prolly due to min-content property. Declaring a min-width will fix it */
+        min-width: 250px;
+        position: relative; /* */ 
+        z-index: 2;
+    }
+    
+    .section__subtitle--intro {
+        /* Align-self can override grid or flex positioning. in this case it aligns the subtitle intro 
+        up (or at the start) of its grid cell. Which also makes it as small as the content allows*/
+        align-self: start; 
+        grid-column: -1/1; /* Start and end-point of grid cell. -1 counts from the opposite end. */
+        /* Now the subtitle intro is below the picture in a 3rd row. we can assign it to the 2nd row
+        to push it behind the img. */
+        grid-row: 2;
+        text-align: right;
+        position: relative; /* Så relative er ift. elementets egen position*/
+        right: 1.5em; /* Skubber element til venstre */
+        /* det gør at elementets højre side ikke længere flugter, så vi øger bredden med 1.5em*/ 
+        width: calc(100% + 1.5em);
+        
+    }
+    
+}
+
+/* my services section */
+
+.my-services {
+    background: var(--clr-dark);
+    background-image: url(../img/services_background.jpg);
+    background-size: cover;
+    
+    background-blend-mode: multiply; /* Blander RGB værdier som gør billedet mere mørkt end oprindeligt*/
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.section__title--services {
+    color: var(--clr-accent);
+    position: relative;
+}
+
+.section__title--services::after {
+    content: "";
+    display: block;
+    width: 3em;
+    height: 1px;
+    margin: 0.5em auto  1em;
+    background: var(--clr-light);
+    opacity: 0.3;
+}
+
+
+.services {
+    margin-bottom: 4em;
+}
+/* Prevents the service text from being too wide on medium screens before it goes into flex
+so from about 600-800 px */
+.service { 
+    max-width: 500px; 
+    margin: 0 auto;
+}
+
+
+
+@media (min-width: 800px) {
+    .services {
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* + combinator selector: styles are applied to the second elements (or sibling)
+    if they are next to each other. the first service does not have a service before it
+    so no margin-left is applied */ 
+    .service + .service {
+        margin-left: 2em; 
+    }
+
+    .service {
+        display: inline-block;
+        width: 15vw; 
+    }
+}
+
+/* About me section */
+
+.about-me {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.about-me__img {
+    box-shadow: var(--bs);
+}
+
+@media (min-width: 600px) {
+    .about-me {
+        display:grid;
+        grid-template-columns: 1fr 250px;
+        grid-template-areas: 
+        "title img"
+        "subtitle img"
+        "text img";
+        column-gap: 2em;
+    }
+    
+    .section__subtitle--about {
+        grid-area: subtitle; /* Han satte grid-row: 2; men hvorfor ikke bruge template*/
+        grid-column: 1/-1;
+        
+        position: relative;
+        right: 1em;
+        width: calc(100% + 2em);
+        padding-left: 1em;
+        padding-right: calc(250px + 3em); /* Så teksten ikke går ind i billedet. skift px hvis billedet skiftes */
+    }
+    
+    .section__title--about {
+        grid-area: title;
+    }
+    
+    .about-me__img {
+        grid-area: img;
+        position: relative;
+        top: 1em;
+        z-index: 2;
+    }
+    
+}
+
+.my-work {
+    background-color: var(--clr-dark);
+    text-align: center;
+    margin: 0 auto;
+}
+
+.portfolio {
+    display: grid;
+    /* Havde først lavet 3*1fr columsn men repeat auto-fit styrer det selv og er responsive */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Man kan ikke se farven normalt da billedet dækker men ses ved transition*/
+.portfolio__item {
+    background-color: var(--clr-accent);
+    overflow: hidden;
+    
+}
+
+.portfolio__img {
+    transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1),
+    opacity 250ms linear;
+    
+}
+
+/* Laver en cool lille effekt når man hover/focus på cellen */
+.portfolio__img:hover,
+.portfolio__item:focus .portfolio__img {
+    transform: scale(1.2);
+    opacity: 0.75;
+}
+
+/* Outline under focus går ind under de andre elementer. fikses sådan her */
+
+.portfolio__item:focus {
+    position: relative;
+    z-index: 2;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #111;
+    color: var(--clr-accent);
+    text-align: center;
+    padding: 2.5em 0em; 
+    font-size: var(--fs-h3)
+}
+
+.footer a { 
+    color: inherit;
+    text-decoration: none; 
+}
+
+.footer-link {
+    
+    font-weight: var(--fw-bold);
+}
+
+.footer-link:hover,
+.social-list__link:hover {
+    opacity: 0.7;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.social-list {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 2em 0 0;
+      padding: 0;
+}
+
+.social-list__item {
+    margin: 0 0.5em;
+}
+
+.social-list__link {
+    padding: 0.5em;
+}
+
+/* Individual portfolio item styles*/
+
+.portfolio-item-individual {
+    max-width: 1000px;
+    margin: 0 auto; 
+    padding: 0 2em 2em; 
+}
+
+.portfolio-item-individual > p {
+    max-width: 800px;
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.portfolio-item-individual > img {
+    max-width: 100%;
+    margin: 0 auto; 
+    
+}
