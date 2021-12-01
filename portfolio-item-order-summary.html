@@ -5,29 +5,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonas Portfolio website</title>
+    <title>Jonas Sørensen</title>
+    <link rel="icon" type="image/svg+xml" href="img/fav-icon.svg">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/portfolio-item-style.css">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;900&family=Source+Sans+Pro:wght@300;900&display=swap" />
+        href='https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;900&family=Source+Sans+Pro:wght@300;900&display=swap'>
 
 </head>
 
 <body>
     <header>
+        <a href="index.html" class="logo">
+            <img src="img/fav-icon.svg" alt="" class="logo__img">
+        </a>
         <button class="nav-toggle" aria-label="toggle navigation">
             <span class="hamburger"></span>
         </button>
         <nav class="nav">
             <ul class="nav__list">
                 <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-                <li class="nav__item"><a href="index.html#services" class="nav__link">My skills</a></li>
+                <li class="nav__item"><a href="index.html#services" class="nav__link">My Skills</a></li>
                 <li class="nav__item"><a href="index.html#about" class="nav__link">About me</a></li>
-                <li class="nav__item"><a href="index.html#work" class="nav__link">Work</a></li>
+                <li class="nav__item"><a href="index.html#work" class="nav__link">My Work</a></li>
             </ul>
         </nav>
 
@@ -35,27 +41,23 @@
 
     <!-- introduction -->
 
-    <section class="intro">
-        <h1 class="section__title section__title--intro">
-            The title <strong>of my project </strong>
+    <section class="portfolio__intro">
+        <h1 class="portfolio__intro-title">
+            <strong>Order summary</strong>
         </h1>
-        <p class="section__subtitle section__subtitle--intro">front-end dev</p>
-        <img src="img/portfolio-01.png" alt="survey image" class="intro__img">
+        <p class="portfolio__intro-subtitle" style="display: none;"></p>
+        <hr class="divider">
+
     </section>
 
     <div class="portfolio-item-individual">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae voluptate, voluptatibus sint illo harum
-            corrupti cum? Repudiandae vitae commodi, modi quia quo sint tempore nulla rerum dolores voluptatem, cumque
-            porro!</p>
+        <p>Small project showcasing the use of the date object in Javascript trough an Analog clock.</p>
+        <p>Here I've used psuedo elements and Javascript DOM manipulation to update the clock in real-time</p>
         <a href="/portfolio_projects/order-summary-frontend-mentor/index">
             <img src="img/order-summary.png" alt="project descripttion">
         </a>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi perferendis, tempora amet dolores facere
-            odio corporis ipsa dolore rem. Consectetur tenetur error ipsum fugiat aliquid perferendis pariatur quis
-            laboriosam aliquam?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora explicabo est expedita provident vitae!
-            Dignissimos reiciendis laudantium, aliquid, inventore enim vitae possimus aut dolorem accusantium, quam
-            illo! Accusamus, eligendi rem!</p>
+
+
     </div>
 
     <footer class="footer">
