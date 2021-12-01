@@ -1,0 +1,71 @@
+:root {
+    --ff-primary: "Source Sans Pro", sans-serif; 
+    --ff-secondary: "Source Code Pro", monospace;
+    
+    --fw-regular: 300;
+    --fw-bold: 900;
+    
+    --clr-light: #FFF; 
+    --clr-dark: #303030;
+    --clr-accent: #16E0BD;
+    
+
+    
+    /* 2 skygger gør det lidt mere realistisk skygge*/
+    --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.125); 
+}
+
+
+hr {
+    height: 0.5rem; 
+    background-color: var(--clr-accent);
+    border: none; 
+    border-radius: 2px;
+}
+
+.portfolio__intro {
+    max-width: 1000px; 
+    margin: 0 auto;
+    padding: 2em 2em;  
+}
+
+.portfolio__intro-title {
+   font-size: 5rem;
+}
+
+.portfolio__intro-subtitle {
+    font-size: 2rem;
+    margin-top: 0; 
+}
+
+.portfolio-item-individual {
+    max-width: 1000px;
+    margin: 0 auto; 
+    padding: 0 2em 2em; 
+}
+
+.portfolio-item-individual > p {
+    max-width: 1000px;
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-top: 0;  
+}
+
+.portfolio-item-individual a {
+    background-color: #16E0BD;
+}
+
+.portfolio-item-individual > a > img {
+    max-width: 100%;
+    margin: 0 auto; 
+    border-radius: 2px;
+    transition: opacity 0.25s linear;
+    
+}
+
+.portfolio-item-individual > a:hover > img {
+    opacity: 0.8;
+    
+    
+}

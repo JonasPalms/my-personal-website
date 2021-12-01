@@ -142,12 +142,13 @@ h3 {font-size: var(--fs-h3);}
 /* Header */
 
 .logo__img {
-    width: 50px;
+    width: 35px;
 }
 
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1em;
 }
 
@@ -489,24 +490,4 @@ so from about 600-800 px */
 
 .social-list__link {
     padding: 0.5em;
-}
-
-/* Individual portfolio item styles*/
-
-.portfolio-item-individual {
-    max-width: 1000px;
-    margin: 0 auto; 
-    padding: 0 2em 2em; 
-}
-
-.portfolio-item-individual > p {
-    max-width: 800px;
-    margin-left: auto; 
-    margin-right: auto; 
-}
-
-.portfolio-item-individual > img {
-    max-width: 100%;
-    margin: 0 auto; 
-    
 }
