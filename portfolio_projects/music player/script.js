@@ -8,7 +8,7 @@ const progressContainer = document.querySelector(".progress-container");
 const title = document.querySelector("#title");
 const cover = document.querySelector("#cover");
 
-// song titles
+// song titles 
 const songs = ["hey", "ukulele", "summer"];
 
 // keep track of songs 
