@@ -296,9 +296,9 @@ header {
     
 }
 
-/* my services section */
+/* my skills section */
 
-.my-services {
+.my-skills {
     background: var(--clr-dark);
     background-image: url(../img/services_background.jpg);
     background-size: cover;
@@ -308,12 +308,12 @@ header {
     text-align: center;
 }
 
-.section__title--services {
+.section__title--skills {
     color: var(--clr-accent);
     position: relative;
 }
 
-.section__title--services::after {
+.section__title--skills::after {
     content: "";
     display: block;
     width: 3em;
@@ -324,20 +324,20 @@ header {
 }
 
 
-.services {
+.skills {
     margin-bottom: 4em;
 }
 /* Prevents the service text from being too wide on medium screens before it goes into flex
 so from about 600-800 px */
-.service { 
-    max-width: 500px; 
+.skill { 
+    max-width: 200px; 
     margin: 0 auto;
 }
 
 
 
 @media (min-width: 800px) {
-    .services {
+    .skills {
         display: flex;
         max-width: 1000px;
         margin-left: auto;
@@ -347,11 +347,11 @@ so from about 600-800 px */
     /* + combinator selector: styles are applied to the second elements (or sibling)
     if they are next to each other. the first service does not have a service before it
     so no margin-left is applied */ 
-    .service + .service {
+    .skill + .skill {
         margin-left: 2em; 
     }
 
-    .service {
+    .skill {
         display: inline-block;
         width: 15vw; 
     }
