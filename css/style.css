@@ -124,7 +124,7 @@ h3 {font-size: var(--fs-h3);}
     background: var(--clr-accent);
     padding: 0.25em 1em;
     font-family: var(--ff-secondary);
-    margin-bottom: 1em;
+    margin-bottom: 0em; /* Changed from 1 - 0*/
 }
 
 .section__title--my-work {
@@ -392,6 +392,10 @@ so from about 600-800 px */
     
     .section__title--about {
         grid-area: title;
+    }
+
+    .about-me__body{
+        padding-top: 0em; 
     }
     
     .about-me__img {
