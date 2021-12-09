@@ -36,6 +36,8 @@ const updateUI = data => {
     if (card.classList.contains("d-none")) {
         card.classList.remove("d-none")
     }
+
+    icon.scrollIntoView(alignToTop);
 }
 
 const updateCity = async (city) => {
