@@ -2,10 +2,14 @@ body {
     background-color: #eeedec;
     letter-spacing: 0.2em;
     font-size: 0.8em;
+    display: flex;
+    align-items: center;
 }
 
 .container {
     max-width: 500px !important;
+
+    
 }
 
 .icon {
