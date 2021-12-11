@@ -37,7 +37,7 @@ const updateUI = data => {
         card.classList.remove("d-none")
     }
 
-    icon.scrollIntoView(alignToTop);
+    
 }
 
 const updateCity = async (city) => {
@@ -58,9 +58,16 @@ cityForm.addEventListener("submit", (e) => {
     cityForm.reset();
 
     // update UI with new city 
-    updateCity(city).then(data => updateUI(data))
+    updateCity(city)
+        .then(data => updateUI(data))
         .catch(err => console.log(err));
+
+    localStorage.setItem("city", city);
 });
 
-
+if(localStorage.getItem("city")) {
+    updateCity(localStorage.getItem("city"))
+        .then(data => updateUI(data))
+        .catch(err => console.log(err));
+}
 
