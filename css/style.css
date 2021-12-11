@@ -411,6 +411,7 @@ so from about 600-800 px */
     background-color: var(--clr-dark);
     text-align: center;
     margin: 0 auto;
+    
 }
 
 .portfolio {
@@ -422,7 +423,9 @@ so from about 600-800 px */
 /* Man kan ikke se farven normalt da billedet dækker men ses ved transition*/
 .portfolio__item {
     background-color: var(--clr-accent);
-    overflow: hidden;   
+    overflow: hidden;  
+    display: flex;
+/* Display flex er sat som fix på img overflow i Safari. Tror ikke det er en super elegant løsning*/ 
     
 }
 
@@ -430,7 +433,8 @@ so from about 600-800 px */
     transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1),
     opacity 250ms linear;
     object-fit: cover;
-    height: 100%;
+    height: 100%; 
+    flex: 1;
     
    
 }
