@@ -3,6 +3,7 @@ const card = document.querySelector('.card');
 const details = document.querySelector('.details');
 const time = document.querySelector("img.time");
 const icon = document.querySelector(".icon img");
+const forecast = new Forecast();
 
 const updateUI = data => {
 
@@ -10,7 +11,7 @@ const updateUI = data => {
     // use destructuring to extract properties from data object 
     // remember: only works if propery name is the same as object key
     const { cityDets, weather } = data;
-    console.log(cityDets, weather);
+    
 
 
     // update details template
@@ -40,16 +41,6 @@ const updateUI = data => {
     
 }
 
-const updateCity = async (city) => {
-
-    const cityDets = await getCity(city);
-    const weather = await getWeather(cityDets.Key);
-
-    // bruger object shorthand notation. JS antager at key og value har samme
-    // så behøver ikke skrive begge
-    return { cityDets, weather };
-}
-
 cityForm.addEventListener("submit", (e) => {
     // prevent default action
     e.preventDefault();
@@ -58,7 +49,7 @@ cityForm.addEventListener("submit", (e) => {
     cityForm.reset();
 
     // update UI with new city 
-    updateCity(city)
+    forecast.updateCity(city)
         .then(data => updateUI(data))
         .catch(err => console.log(err));
 
@@ -66,7 +57,7 @@ cityForm.addEventListener("submit", (e) => {
 });
 
 if(localStorage.getItem("city")) {
-    updateCity(localStorage.getItem("city"))
+    forecast.updateCity(localStorage.getItem("city"))
         .then(data => updateUI(data))
         .catch(err => console.log(err));
 }
