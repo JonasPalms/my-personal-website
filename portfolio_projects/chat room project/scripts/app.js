@@ -41,7 +41,7 @@ rooms.addEventListener("click", e => {
 const username = localStorage.username ? localStorage.username : "anon"; 
 
 // class instances
-const chatroom = new Chatroom("gaming", username);
+const chatroom = new Chatroom("general", username);
 const chatUI = new ChatUI(chatList);
 
 // get chats and render
