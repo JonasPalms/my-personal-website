@@ -16,6 +16,9 @@
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.125); 
 }
 
+body {
+    min-height: 100vh;
+}
 
 hr {
     height: 0.5rem; 
@@ -66,4 +69,10 @@ hr {
     opacity: 0.8;
     
     
+}
+
+.portfolio-item.footer {
+    position: absolute; 
+    bottom: 0; 
+    width: 100%
 }
